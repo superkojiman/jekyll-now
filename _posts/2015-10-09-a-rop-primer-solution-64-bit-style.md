@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A ROP Primer Solution 64-bit Style"
+title: "A ROP Primer solution 64-bit style"
 date: 2015-10-09 05:36:29 -0400
 comments: true
 categories: boot2root
