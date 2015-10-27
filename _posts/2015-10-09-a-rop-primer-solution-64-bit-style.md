@@ -227,7 +227,7 @@ Legend: code, data, rodata, value
 Breakpoint 1, 0x0000000000400f58 in handle_conn ()
 ```
 
-The description of the challenge hints that we can use open(), read(), and write() to get the flag. So much like the 32-bit solution, I solved it using ret2plt. Unlike the 32-bit solution however, this was turned out to be more complicated. In 64-bit binaries, the first six function parameters are passed in registers RDI, RSI, RDX, RCX, R8, and R9. Anything more is passed on the stack. In order to return to open@plt, read@plt, and write@plt, I needed to populate these registers with the proper values. Unlike level0, this is a dynamically linked binary so I had limited gadgets to work with. Fortunately, I can get everything I need from \_\_libc\_csu\_init() as described [here](http://v0ids3curity.blogspot.com/2013/07/some-gadget-sequence-for-x8664-rop.html). 
+The description of the challenge hints that we can use open(), read(), and write() to get the flag. So much like the 32-bit solution, I solved it using ret2plt. Unlike the 32-bit solution however, this turned out to be more complicated. In 64-bit binaries, the first six function parameters are passed in registers RDI, RSI, RDX, RCX, R8, and R9. Anything more is passed on the stack. In order to return to open@plt, read@plt, and write@plt, I needed to populate these registers with the proper values. Unlike level0, this is a dynamically linked binary so I had limited gadgets to work with. Fortunately, I can get everything I need from \_\_libc\_csu\_init() as described [here](http://v0ids3curity.blogspot.com/2013/07/some-gadget-sequence-for-x8664-rop.html). 
 
 Here's a breakdown of \_\_libc\_csu\_init():
 
