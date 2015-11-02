@@ -40,7 +40,7 @@ Let's take a look at a sample WPA-PSK network captured by airodump-ng:
  00:0F:66:XX:XX:XX  18:E7:F4:XX:XX:XX  -65    1 - 1      0        7
 ```
  
- Our target access point is called prime2 and it has six clients connected to it. Let's say we want to deauthenticate the last four on that list. The fastest way to do that is to just copy and paste those lines into a file. Call it target_list.txt. It should look like this:
+Our target access point is called prime2 and it has six clients connected to it. Let's say we want to deauthenticate the last four on that list. The fastest way to do that is to just copy and paste those lines into a file. Call it target_list.txt. It should look like this:
 
 ```
  00:0F:66:XX:XX:XX  00:1B:77:XX:XX:XX  -47   36 -24      0     1217
@@ -49,7 +49,7 @@ Let's take a look at a sample WPA-PSK network captured by airodump-ng:
  00:0F:66:XX:XX:XX  18:E7:F4:XX:XX:XX  -65    1 - 1      0        7
 ```
 
-Next, run mass_deauth.sh and pass it target_list.txt:
+Next, run mass\_deauth.sh and pass it target\_list.txt:
 
 A quick explanation on what the options mean. 
 
