@@ -305,7 +305,7 @@ whoami
 fristigod
 ```
 
-Great, one step closer to root! fristigod's home directory contained a file called doCom located in /var/fristigod/.secret_admin_stuff:
+Great, one step closer to root! fristigod's home directory contained a file called doCom located in /var/fristigod/.secret\_admin\_stuff:
 
 ```
 -bash-4.1$ ./doCom
