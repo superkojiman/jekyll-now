@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fristileaks Hacking Challenge"
-date: 2015-12-14 08:04:16 -0500
+date: 2015-12-15 00:57:23 -0500
 comments: true
 categories: boot2root
 ---
@@ -10,7 +10,7 @@ Fristileaks is the latest addition to [VulnHub's](https://www.vulnhub.com/entry/
 
 The initial portscan revealed only port 80 to be open. I pointed my browser over to the target and was greeted with a lovely banner: 
 
-![](/images/2015-12-14/01.png)
+![](/images/2015-12-15/01.png)
 
 So many names listed at the bottom of the webpage. Potential user accounts on the server perhaps? I copied them over to a file just in case I needed it later. I ran Nikto against the webserver to see if I could get any clues on how to proceed: 
 
@@ -21,7 +21,7 @@ So many names listed at the bottom of the webpage. Potential user accounts on th
 + Target IP:          192.168.119.152
 + Target Hostname:    192.168.119.152
 + Target Port:        80
-+ Start Time:         2015-12-14 20:10:30 (GMT-5)
++ Start Time:         2015-12-15 20:10:30 (GMT-5)
 ---------------------------------------------------------------------------
 + Server: Apache/2.2.15 (CentOS) DAV/2 PHP/5.3.3
 + Server leaks inodes via ETags, header found with file /, inode: 12722, size: 703, mtime: Tue Nov 17 13:45:47 2015
@@ -41,7 +41,7 @@ So many names listed at the bottom of the webpage. Potential user accounts on th
 + OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.
 + OSVDB-3233: /icons/README: Apache default file found.
 + 8348 requests: 0 error(s) and 16 item(s) reported on remote host
-+ End Time:           2015-12-14 20:10:55 (GMT-5) (25 seconds)
++ End Time:           2015-12-15 20:10:55 (GMT-5) (25 seconds)
 ---------------------------------------------------------------------------
 + 1 host(s) tested
 ```
@@ -118,7 +118,7 @@ DOWNLOADED: 70 - FOUND: 0
 Sweet, I got a hit with "fristi". Heading over to http://192.168.119.152/fristi/ returned a login form:
 
 
-![](/images/2015-12-14/02.png)
+![](/images/2015-12-15/02.png)
 
 Taking a look at the source code revealed some interesting tidbits. First, there was a comment made by the user eezeepz.
 
@@ -179,12 +179,12 @@ This actually decoded into a PNG file.
 With that in mind, I saved it into its own file and opened it. 
 
 
-![](/images/2015-12-14/03.png)
+![](/images/2015-12-15/03.png)
 
 As it turns out, it was eezeepz's password for the login form. Punching the credentials in displayed a webpage that would upload a file to the server: 
 
 
-![](/images/2015-12-14/04.png)
+![](/images/2015-12-15/04.png)
 
 The upload form would only accept png, jpg, and gif files. However, the upload script didn't actually check the file type; only the extension. That meant it would be easy enough to bypass by simply adding that extension to whatever file I wanted to upload. 
 
@@ -193,7 +193,7 @@ Uploaded files are stored in http://192.168.119.152/fristi/uploads/. My first th
 The .png extension allowed me to upload it, and accessing it via curl triggered the PHP webshell and gave me a reverse shell as the apache user: 
 
 
-![](/images/2015-12-14/05.png)
+![](/images/2015-12-15/05.png)
 
 I had a quick peek at /home and found three home directories:
 
