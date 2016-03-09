@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fristileaks Hacking Challenge"
+title: "Fristileaks hacking challenge"
 date: 2015-12-15 00:57:23 -0500
 comments: true
 categories: boot2root
