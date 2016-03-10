@@ -21,9 +21,7 @@ Brian O'Connor
 Sonic The Hedgehog
 ```
 
-Now here's the script that will create the possible login IDs:
-
-{% gist 11076951 %}
+Now here's the script that will create the possible login IDs: [https://gist.github.com/superkojiman/11076951](https://gist.github.com/superkojiman/11076951)
 
 Run the script by passing the file containing the first name and last name and you'll get an output that looks like this:
 

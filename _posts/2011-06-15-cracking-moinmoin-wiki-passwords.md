@@ -45,9 +45,7 @@ Here's what the function does:
 1. Update the hash with the salt
 1. Encode the hashed password and the salt with Base64
 
-The result is assigned as the value to the enc_password key. Now that we know how to the password is encrypted, we can write a script that will perform a dictionary attack against the encrypted password:
-
-{% gist 11073420 %}
+The result is assigned as the value to the enc_password key. Now that we know how to the password is encrypted, we can write a script that will perform a dictionary attack against the encrypted password: [https://gist.github.com/superkojiman/11073420](https://gist.github.com/superkojiman/11073420)
 
 The script takes two arguments. The first is a colon delimited username and password. This can be created with a bit of command-line-fu from the data/user directory. It should look like this:
 

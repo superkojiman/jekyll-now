@@ -26,9 +26,7 @@ information. Now in some cases, it won't find a Wikipedia entry for an artist, o
 listed. In that case, it won't change the genres entry for that artist in your music library. Artists whose genres
 can't be found are printed out at the end of the script so you can look it up yourself. 
 
-Here's the script:
-
-{% gist 10927867 %}
+Here's the script: [https://gist.github.com/superkojiman/10927867](https://gist.github.com/superkojiman/10927867)
 
 Save the script as getgenre.
 

@@ -7,24 +7,15 @@ categories: coding hacking
 redirect_from: /2010/02/where-are-you-geolocating-server-by-its.html
 ---
 
-I often see IP addresses in log files on my servers and wonder where they might be coming from. Tools such as
-traceroute and whois are great when you need to dig further, But if you just want a quick answer to the question
-"where are you?", here's a possible solution. 
+I often see IP addresses in log files on my servers and wonder where they might be coming from. Tools such as traceroute and whois are great when you need to dig further, But if you just want a quick answer to the question "where are you?", here's a possible solution. 
 
 <!--more-->
 
-Several websites already offer services that let you enter an IP address in a form and it returns a nice Google Map
-along with additional information about that IP address. That's handy most of the time, but not when you're SSH'd
-into the server and have no access to a pretty GUI.
+Several websites already offer services that let you enter an IP address in a form and it returns a nice Google Map along with additional information about that IP address. That's handy most of the time, but not when you're SSH'd into the server and have no access to a pretty GUI.
 
-So here's a python script that I put together that accepts both IP addresses and hostnames, and will allow you to
-get the information you need via command line:
+So here's a python script that I put together that accepts both IP addresses and hostnames, and will allow you to get the information you need via command line: [https://gist.github.com/superkojiman/10912004](https://gist.github.com/superkojiman/10912004)
 
-{% gist 10912004 %}
-
-The script uses the API provided by [http://www.hostip.info](http://www.hostip.info) to retrieve country, city, latitude, and longitude of
-the server. Save it as whereru. You can pass it an IP address using the -i flag, or a hostname using -h. Here's an
-example searching by hostname: 
+The script uses the API provided by [http://www.hostip.info](http://www.hostip.info) to retrieve country, city, latitude, and longitude of the server. Save it as whereru. You can pass it an IP address using the -i flag, or a hostname using -h. Here's an example searching by hostname: 
 
 ```
 $ whereru -h facebook.com
@@ -50,10 +41,6 @@ Longitude: 121.617
 Google map: http://maps.google.com/maps?q=13.9333,+121.617
 ```
 
-The Google map link is provided, although the coordinates I receive from hostip.info don't seem all that accurate
-all the time. Oh well. 
+The Google map link is provided, although the coordinates I receive from hostip.info don't seem all that accurate all the time. Oh well. 
 
-**Update 17/02/2010**: It looks like the API changed a little. They're now adding a newline in the results, which gets
-added to the result list. This causes the script to break because it expects the latitude to be in results[2] but
-finds a newline there instead. So the script's been changed to ignore newlines and to scan the lines for 'latitude'
-and 'longitude' and use that instead of relying on indexes. 
+**Update 17/02/2010**: It looks like the API changed a little. They're now adding a newline in the results, which gets added to the result list. This causes the script to break because it expects the latitude to be in results[2] but finds a newline there instead. So the script's been changed to ignore newlines and to scan the lines for 'latitude' and 'longitude' and use that instead of relying on indexes. 

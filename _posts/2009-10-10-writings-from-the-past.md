@@ -7,22 +7,13 @@ categories: howto
 redirect_from: /2009/10/writings-from-past.html
 ---
 
-Once upon a time I used to write tutorials for a site called
-Linuxnewbie.org
+Once upon a time I used to write tutorials for a site called Linuxnewbie.org
 
-Linuxnewbie had this idea to create really easy to understand tutorials for
-newcomers to Linux. I became actively involved in the forums and in writing
-tutorials for the site. Some of my tutorials were actually popular enough
-that they got posted on other Linux sites and even translated to other
-languages.
+Linuxnewbie had this idea to create really easy to understand tutorials for newcomers to Linux. I became actively involved in the forums and in writing tutorials for the site. Some of my tutorials were actually popular enough that they got posted on other Linux sites and even translated to other languages.
 
 <!--more-->
 
-Linuxnewbie.org has since changed ownership and is now
-[JustLinux.com](http://www.justlinux.com) and I'm no longer
-actively involved in the site, although I visit it once in a blue moon.
-Anyway, I'm posting the tutorials here since some of them are still useful, but 
-be warned that some are very old and may no longer be relevant today. 
+Linuxnewbie.org has since changed ownership and is now [JustLinux.com](http://www.justlinux.com) and I'm no longer actively involved in the site, although I visit it once in a blue moon.  Anyway, I'm posting the tutorials here since some of them are still useful, but be warned that some are very old and may no longer be relevant today. 
 
 * [Introduction to BASH shell scripting](http://www.techorganic.com/tutorials/bash_scripting.pdf)
 * [Compiling software](http://www.techorganic.com/tutorials/compiling_software.pdf)
