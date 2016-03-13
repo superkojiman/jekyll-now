@@ -119,9 +119,10 @@ hits: 1
 0x004007d2 hit2_0 "Win"
 ```
 
-Obviously we want to see the "Win!" message get printed, and that's the whole point of this reversing exercise. To find out where it's being referenced from, we can use the `axt` command. 
+Obviously we want to see the "Win!" message get printed, and that's the whole point of this reversing exercise. To find out where it's being referenced from, we need to analyze all the functions first using the `aaa` command. Once that's done, we can use the `axt` command: 
 
 ```
+[0x004005ed]> aaa
 [0x004005ed]> axt 0x004007d2
 data 0x400704 mov edi, str.Win_ in main
 ```
@@ -138,7 +139,7 @@ So far so good. We've identified a "Win!" message we want to end up in, and we k
 
 ### Working with functions
 
-The next step is to have a look at what functions are available in the binary. We first need to tell Radare to analyze all the functions so we can list them. This can be done with the `aaa` command, followed by the `afl` command:
+The next step is to have a look at what functions are available in the binary. As before, we need to analyze all the functions first using `aaa`. Then we can use the `afl` command to list all analyed functions: 
 
 ```
 [0x004004b0]> aaa
