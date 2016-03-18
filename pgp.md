@@ -12,6 +12,4 @@ Key        : 0x0D486211
 Fingerprint: 3930 5291 0B28 1ABF 7AAD  635C FB70 83F9 0D48 6211
 ```
 
-If you aren't familiar with [PGP](http://www.pgp.com) or [GnuPG](http://www.gnupg.org), the 
-[GnuPG Handbook](http://www.gnupg.org/gph/en/manual.html) is freely available online. 
-
+If you aren't familiar with [PGP](http://www.pgp.com) or [GnuPG](http://www.gnupg.org), the [GnuPG Handbook](http://www.gnupg.org/gph/en/manual.html) is freely available online. 
