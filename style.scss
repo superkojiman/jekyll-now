@@ -18,8 +18,8 @@ html {
 }
 
 body {
-	//background: $white;
-	background: #E5E4E2;// #e6e6e6;
+	background: $white;
+	//background: #E5E4E2;// #e6e6e6;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -157,7 +157,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 5px solid #cccccc; //$lightGray;
 
   @include mobile {
     text-align: center;
@@ -244,7 +244,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 2px solid #cccccc; //$lightGray;
 }
 
 .posts > .post:last-child {
