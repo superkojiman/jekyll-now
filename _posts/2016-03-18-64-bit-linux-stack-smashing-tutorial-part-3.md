@@ -55,7 +55,7 @@ The vulnerability is in the vuln() function, where read() is allowed to write 40
 
 1. Leak the address of a library function in the GOT. In this case, we'll leak memset()'s GOT entry, which will give us memset()'s address. 
 1. Get libc's base address so we can calculate the address of other library functions. libc's base address is the difference between memset()'s address, and memset()'s offset from libc.so.6. 
-1. A library unction's address can be obtained by adding its offset from libc.so.6 to libc's base address. In this case, we'll get system()'s address.
+1. A library function's address can be obtained by adding its offset from libc.so.6 to libc's base address. In this case, we'll get system()'s address.
 1. Overwrite a GOT entry's address with system()'s address, so that when we call that function, it calls system() instead. 
 
 You should have a bit of an understanding on how shared libraries work in Linux. In a nutshell, the loader will initially point the GOT entry for a library function to some code that will do a slow lookup of the function address. Once it finds it, it overwrites its GOT entry with the address of the library function so it doesn't need to do the lookup again. That means the second time a library function is called, the GOT entry will point to that function's address. That's what we want to leak. For a deeper understanding of how this all works, I refer you to [PLT and GOT - the key to code sharing and dynamic libraries](https://www.technovelty.org/linux/plt-and-got-the-key-to-code-sharing-and-dynamic-libraries.html). 
