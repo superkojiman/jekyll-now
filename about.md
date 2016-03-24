@@ -4,12 +4,14 @@ title: About
 permalink: /about/
 ---
 
-I'm system administrator, programmer, and computer security enthusiast. This blog was started as a means to encourage me to continuously learn new and cool things, and to share it with others who might find it interesting. An online portfolio if you will.  
+Hello Internet! My name is Harold. If you're here, you probably know me as *superkojiman*. Here are some things about me:
 
-Some contributions I've made to the community include the [Brainpan](https://www.vulnhub.com/?q=Brainpan&sort=date-asc&type=vm) challenges, and handful of [exploits](http://www.exploit-db.com/author/?a=5530). I also participate in CTF events as a member of the [VulnHub CTF Team](https://github.com/VulnHub/ctf-writeups/).
+* I code, sometimes. Most of it is on [GitHub](https://github.com/superkojiman), and open source. 
+* Sometimes I [break things](https://github.com/superkojiman/vulnerabilities) and write about them. 
+* I contribute to [VulnHub](https://www.vulnhub.com/?q=Brainpan&sort=date-asc&type=vm) with my Brainpan boot2root challenges! Take them for a spin!
+* I'm also a [VunHub CTF Team](https://github.com/VulnHub/ctf-writeups/) member. I like to tackle pwnables and reverse engineering challenges. Sometimes I get a shell.
+* I hold the [OSCP](http://www.offensive-security.com/information-security-certifications/oscp-offensive-security-certified-professional/) and [OSCE](http://www.offensive-security.com/information-security-certifications/osce-offensive-security-certified-expert/) certifications. It means I'm stubborn and I try harder. 
+* Learning new things is fun. I like to learn new things.
+* I like coffee.
 
-Although I'm not in infosec professionally, I've obtained the [OSCP](http://www.offensive-security.com/information-security-certifications/oscp-offensive-security-certified-professional/) and [OSCE](http://www.offensive-security.com/information-security-certifications/osce-offensive-security-certified-expert/) certifications to challenge myself, and simply because I thought it would be a fun massive CTF. 
-
-You can reach me by email, or follow me on Twitter using the buttons at the bottom of this page. 
-
-Harold *"superkojiman"* Rodriguez
+If you'd like to reach out to me, links to my email address and Twitter are at the bottom of this page. 
