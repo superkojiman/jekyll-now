@@ -46,7 +46,7 @@ done
 Delete all that and replace it with the following:
 
 ```
-${HOME}/secure.delete.log
+srm -fmvzr "$@" > ${HOME}/secure.delete.log
 ```
 
 This simply means run srm on the selected files and create a log file in the user's home folder. 
