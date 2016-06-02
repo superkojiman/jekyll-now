@@ -105,7 +105,7 @@ route=http://172.16.146.129/test
 Sure enough, the contents of my PHP page were executed and displayed:
 
 
-![](/images/2016-06-02/milnetindex.png)
+![](/images/2016-06-02/rfi.png)
 
 Time to get a shell! I'm using a PHP reverse shell from [Pentest Monkey](http://pentestmonkey.net/tools/web-shells/php-reverse-shell), which you can also find in a default Kali install. I saved it as shell.php, setup a netcat listener on port 1234, and replayed the captured HTTP request on Burp Suite, making sure to set route to http://172.16.146.129/shell
 
