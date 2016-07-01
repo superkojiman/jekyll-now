@@ -6,7 +6,7 @@ comments: true
 categories: ctf
 ---
 
-This was a 350 point exploitable challenge that [barrebas](https://twitter.com/barrebas), [Swappage](https://twitter.com/swappage), and I tackled. I don't normally post CTF writeups here since we have our own separate [blog](https://ctf-team.vulnhub.com) for that, but this was interesting one. 
+This was a 350 point exploitable challenge that [barrebas](https://twitter.com/barrebas), [Swappage](https://twitter.com/swappage), and I tackled. I don't normally post CTF writeups here since we have our own separate [website](https://github.com/VulnHub/ctf-writeups) for that, but this was interesting one. 
 
 We're given an IP address and a port to connect to. Connecting to the port dumped what looked like an ELF binary. I saved the output and sure enough, it was a simple 64-bit executable that received input from the user on a port and echoed it back. 
 
