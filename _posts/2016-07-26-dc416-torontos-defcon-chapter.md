@@ -12,7 +12,7 @@ I don't get to go to cons much, mainly because I don't work in security and I'd 
 
 For the second meetup, I was invited to give a talk, so I put together a presentation on pwning CTF binaries. My slides are [here](https://speakerdeck.com/superkojiman/pwning-pwnables) if you're interested, although I'm not sure how much you'd get out of it without the context. That was yesterday. The crowd turn out was even larger than the first. I'm happy that more people are starting to hear about DC416, and I hope that it becomes popular enough that others step forward to give more great talks. 
 
-The organizers are super cool and friendly, and so was the crowd. I generally keep to myself and avoid talking to strangers, but it's not hard to get lost in a conversation when you suddenly have three people you didn't know minutes ago, chatting with you about exploitation. It was a lively event, people were having a good time in between talks, and some good questions were asked during the presentations. Also, free stickers and prizes.
+The organizers are super cool and friendly, and so was the crowd. I generally keep to myself and avoid talking to strangers, but it's easy to get lost in a conversation when you suddenly have three people you didn't know minutes ago, chatting with you about exploitation. It was a lively event, people were having a good time in between talks, and some good questions were asked during the presentations. Also, free stickers and prizes.
 
 ![](/images/2016-07-25/dc-sticker.jpg)
 
