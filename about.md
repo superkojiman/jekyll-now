@@ -15,4 +15,4 @@ Hello Internet! My name is Harold. If you're here, you probably know me as *supe
 * Learning new things is fun. I like to learn new things.
 * I like coffee.
 
-If you'd like to reach out to me, links to my email address and Twitter are at the bottom of this page. 
+If you'd like to reach out to me, links to my email and Twitter are at the bottom of this page. Please don't ask me to assist you with illegal things. Those kinds of emails and tweets will be ignored. 
