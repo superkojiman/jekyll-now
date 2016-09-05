@@ -256,7 +256,7 @@ Something called talisman showed up. Browsing to the directory revealed that it 
 0x08048a37    1 1024         sym.chantToBreakSpell
 ```
 
-The function chantToBreakSpell() wasn't being called anywhere. I couldn't find any strings, because they were all encoded, but could be decoded using the unhide() function. So when a string had to be printed, it would call myPrintf(), which in turn would call unhide() to print the string, and then encode it again with the hide() function right before exiting myPrintf(). The trick seemed to be to redirect execution of the program to chantToBreakSpell(). There are several ways to do this. What I did was to break at the return instruction at the end of main() in gdb, and then modify $esp to point to  chantToBreakSpell() so main() would return to it. 
+The function chantToBreakSpell() wasn't being called anywhere. I couldn't find any strings, because they were all encoded, but could be decoded using the unhide() function. So when a string had to be printed, it would call myPrintf(), which in turn would call unhide() to print the string, and then encode it again with the hide() function right before exiting myPrintf(). The trick seemed to be to redirect execution of the program to chantToBreakSpell(). There are several ways to do this. What I did was to break at the return instruction at the end of main() in gdb, and then modify ESP to point to  chantToBreakSpell() so main() would return to it. 
 
 Once there, I set a breakpoint at the call to unhide() in myPrintf():
 
@@ -375,7 +375,7 @@ necromancer.cap
 necromancer.cap: tcpdump capture file (little-endian) - version 2.4 (802.11, capture length 65535)
 ```
 
-A pcap file. I loaded it up into Wireshark for examination and found that it was a wifi capture that had captured a WPA2 handshake. I ran it against aircrack-ng and got the password using the wordlist at [https://download.g0tmi1k.com/wordlists/wifi/renderlab-Church_of_Wifi-9-final-wordlist.zip](https://download.g0tmi1k.com/wordlists/wifi/renderlab-Church_of_Wifi-9-final-wordlist.zip)::
+A pcap file. I loaded it up into Wireshark for examination and found that it was a wifi capture that had captured a WPA2 handshake. I ran it against aircrack-ng and got the password using the wordlist at [https://download.g0tmi1k.com/wordlists/wifi/renderlab-Church_of_Wifi-9-final-wordlist.zip](https://download.g0tmi1k.com/wordlists/wifi/renderlab-Church_of_Wifi-9-final-wordlist.zip):
 
 ```
                                  Aircrack-ng 1.2 rc4
@@ -645,7 +645,7 @@ Where do the Black Robes practice magic of the Greater Path?
 !!!!!!! You have been defeated by The Necromancer! (*_*) !!!!!!!
 ```
 
-All the ports had been closed and I basically had to start all over again. No problem. I re-did all the steps all over again and scripted it out in case I was defeated yet again and had to start all over. 
+All the ports had been closed and any progress I had made on the server was wiped clean. No problem. I re-did everything up until I got SSH access again. This time I made a quick and dirty script to pwn the machine from scratch up to the current point I was in:
 
 ```
 #!/bin/bash
@@ -697,7 +697,7 @@ Defend yourself from the Necromancer's Spells!
 Who is tricked into passing the Ninth Gate? 
 ```
 
-I got this wrong initially, because I thought it was referring to the movie "The Ninth Gate" starring Johnny Depp. It turns out the answer was "Hedge"; a character from [The Old Kingdom Trilogy](https://en.wikipedia.org/wiki/List_of_Old_Kingdom_characters#Hedge):
+I initially got this wrong, because I thought it was referring to the movie "The Ninth Gate" starring Johnny Depp. It turns out the answer was "Hedge"; a character from [The Old Kingdom Trilogy](https://en.wikipedia.org/wiki/List_of_Old_Kingdom_characters#Hedge):
 
 ```
 Who is tricked into passing the Ninth Gate?  Hedge
@@ -808,4 +808,4 @@ Thanks to SecTalks Brisbane and their sponsors for making these CTF challenges p
 "========================================="
 ```
 
-This was a different kind of boot2root altogether. Definitely more on the CTF side, which was a nice fun change. Cheers to [https://twitter.com/@xerubus](Xerebus) for an awesome challenge!
+This was a different kind of boot2root altogether. Definitely more on the CTF side, which was a nice fun change. Cheers to [Xerebus](https://twitter.com/@xerubus) for an awesome challenge!
