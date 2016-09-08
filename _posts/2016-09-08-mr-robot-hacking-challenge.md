@@ -6,7 +6,7 @@ comments: true
 categories: boot2root
 ---
 
-Time for another boot2root! I'm a fan of the Mr. Robot TV series, so I was looking forward to giving this one a go. It's been out for a while now and can be downlaoded from [VulnHub](https://www.vulnhub.com/entry/mr-robot-1,151/). This challenge is based off the TV show and contains three flags. To ensure I was in the proper mood, I put on the [Mr. Robot Soundtrack](https://itunes.apple.com/ca/album/mr.-robot-vol.-1-original/id1111847619), dimmed the lights, kept my power drill beside me, and fired up the official Mr. Robot hacking OS; [Kali Linux](https://www.kali.org/). 
+Time for another boot2root! I'm a fan of the Mr. Robot TV series, so I was looking forward to giving this one a go. It's been out for a while now and can be downloaded from [VulnHub](https://www.vulnhub.com/entry/mr-robot-1,151/). This challenge is based off the TV show and contains three flags. To ensure I was in the proper mood, I put on the [Mr. Robot Soundtrack](https://itunes.apple.com/ca/album/mr.-robot-vol.-1-original/id1111847619), dimmed the lights, kept my power drill beside me, and fired up the official Mr. Robot hacking OS; [Kali Linux](https://www.kali.org/). 
 
 First up, a detailed TCP and UDP port scan to ensure I didn't miss anything. 
 
