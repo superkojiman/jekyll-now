@@ -23,7 +23,7 @@ We've already compromised the web server and obtained SSH access to it as the us
 
 ### The exploit
 
-The Windows XP machine runs a vulnerable service called Server-Strcpy on port 10000. Server-Strcpy is part of the [SecurityTube Exploit Research Megaprimer](http://www.securitytube.net/video/1399) series, and can be downloaded at [http://code.securitytube.net/Server-Strcpy.exe](http://code.securitytube.net/Server-Strcpy.exe). I've written a quick exploit for Server-Strcpy.exe that binds a shell on port 4444, and can be downloaded [here](http://techorganic.com/software/serverstrcpy.py).
+The Windows XP machine runs a vulnerable service called Server-Strcpy on port 10000. Server-Strcpy is part of the [SecurityTube Exploit Research Megaprimer](http://www.securitytube.net/video/1399) series, and can be downloaded at [http://code.securitytube.net/Server-Strcpy.exe](http://code.securitytube.net/Server-Strcpy.exe). I've written a quick exploit for Server-Strcpy.exe that binds a shell on port 4444, and can be downloaded [here](https://gist.github.com/superkojiman/fcb256c4ca40da00ad9676efd07a161c).
 
 
 ### The attack

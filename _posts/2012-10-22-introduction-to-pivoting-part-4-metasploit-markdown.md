@@ -21,7 +21,7 @@ We've already compromised the web server and obtained some form of shell access 
 
 ### The exploit
 
-The Windows XP machine runs a vulnerable service called Server-Strcpy on port 10000. Server-Strcpy is part of the [SecurityTube Exploit Research Megaprimer](http://www.securitytube.net/video/1399) series, and can be downloaded at [http://code.securitytube.net/Server-Strcpy.exe](http://code.securitytube.net/Server-Strcpy.exe). I ported the python exploit we used in the previous articles into a Metasploit module which can be downloaded [here](http://techorganic.com/software/serverstrcpy.rb). It should be saved in ~/.msf4/modules/exploits/windows/misc/. 
+The Windows XP machine runs a vulnerable service called Server-Strcpy on port 10000. Server-Strcpy is part of the [SecurityTube Exploit Research Megaprimer](http://www.securitytube.net/video/1399) series, and can be downloaded at [http://code.securitytube.net/Server-Strcpy.exe](http://code.securitytube.net/Server-Strcpy.exe). I ported the python exploit we used in the previous articles into a Metasploit module which can be downloaded [here](https://gist.github.com/superkojiman/df9df065e2bbbef365aa5e2214e7f934). It should be saved in ~/.msf4/modules/exploits/windows/misc/. 
 
 ### The attack
 
