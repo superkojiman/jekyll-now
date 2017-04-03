@@ -285,4 +285,4 @@ Got our root shell again, and we bypassed NX. Now this was a relatively simple e
 int execve(const char *filename, char *const argv[], char *const envp[]);
 ```
 
-This means you'll need to have RDI, RSI, and RCX populated with proper values before calling execve(). Try to use gadgets only within the binary itself, that is, don't look for gadgets in libc. Good luck!
+This means you'll need to have RDI, RSI, and RDX populated with proper values before calling execve(). Try to use gadgets only within the binary itself, that is, don't look for gadgets in libc. Good luck!
