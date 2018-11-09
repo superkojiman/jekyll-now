@@ -127,7 +127,7 @@ root@kali:~# nikto -host http://raven.local
 + 1 host(s) tested
 ```
 
-Nikto has reported on a few things that we can look into. Directories like /img and /manual are common for Apache installations, so those become a lower priority for me to investigate. The `/wordpress` directory indicating a Wordpress installation is however interesting. Wordpress plugins tend to get outdated and may be vulnerable to a variety of things. On top of that, Wordpress has this behaviour in its login interface which allows us to enumerate existing user accounts. 
+Nikto has reported on a few things that we can look into. Directories like `/img` and `/manual` are common for Apache installations, so those become a lower priority for me to investigate. The `/wordpress` directory indicating a Wordpress installation is however interesting. Wordpress plugins tend to get outdated and may be vulnerable to a variety of things. On top of that, Wordpress has this behaviour in its login interface which allows us to enumerate existing user accounts. 
 
 For enumerating Wordpress, I use `wpscan`. It performs a variety of things from examining the version of Wordpress and its plugins for any vulnerabilities, as well as attempting to enumerate and bruteforce user accounts it discoveres. Before you can use `wpscan`, you need to update its database:
 
