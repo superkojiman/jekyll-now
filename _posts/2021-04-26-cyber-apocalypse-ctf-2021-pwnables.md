@@ -538,7 +538,7 @@ The `stare()` function attempts to find a weakness in the Harvester, but will fa
     }
 ```
 
-A stack buffer overflow vulnerability exists which allows us to overwrite `stare()`'s saved return pointer. The saved return pointer is 56 bytes from the end of the buffer. In order to reach this code branch, we need to leverage the Inventory vulnerability to drop -11 pies so that the user ends up with 21 pies. When Stare is called, an extra pie is added to our invetory, leaving us with 22 pies. 
+A stack buffer overflow vulnerability exists which allows us to overwrite `stare()`'s saved return pointer. The saved return pointer is 56 bytes from the end of the buffer. In order to reach this code branch, we need to leverage the Inventory vulnerability to drop -11 pies so that the user ends up with 21 pies. When Stare is called, an extra pie is added to our inventory, leaving us with 22 pies. 
 
 ### Run
 
