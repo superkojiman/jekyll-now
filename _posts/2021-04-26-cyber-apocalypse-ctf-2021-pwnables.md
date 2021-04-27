@@ -231,7 +231,7 @@ The binary itself is very simple. It prompts the user if they're ready to plant 
 0x00400add      mov     qword [rax], rdx
 ```
 
-The first though was to overwrite a function pointer in the GOT, but there are actually no functions called right after `mission()` returns. If we look at the writable sections reported by Cutter, we see that `.fini_array` is at 0x601078. This location contains a pointer to `__do_global_dtors_aux` which handles destructors. 
+The first thought was to overwrite a function pointer in the GOT, but there are actually no functions called right after `mission()` returns. If we look at the writable sections reported by Cutter, we see that `.fini_array` is at 0x601078. This location contains a pointer to `__do_global_dtors_aux` which handles destructors. 
 
 ```
 pwndbg> x/a 0x601078
