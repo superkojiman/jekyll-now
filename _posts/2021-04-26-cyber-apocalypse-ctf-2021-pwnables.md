@@ -658,7 +658,7 @@ The `plant()` function prompts the user for a type of tree to plant, and then a 
 
 ### Recycle
 
-The `recycle()` function prompt the user for what material to recycle. Whatever option the user selects, the `form()` function is called which asks the user if this is their first time recycling. A counter is mainted in 0x603080 as `rec_count` which keeps track of how many times a user has recycled. If the user recyles 5 times, the binary leaks the libc address of `printf()`. If the user recycles 10 times, the binary allows the user to enter an arbitrary address and leaks its value. This is effectively a read primitive. 
+The `recycle()` function prompt the user for what material to recycle. Whatever option the user selects, the `form()` function is called which asks the user if this is their first time recycling. A counter is maintained in 0x603080 as `rec_count` which keeps track of how many times a user has recycled. If the user recyles 5 times, the binary leaks the libc address of `printf()`. If the user recycles 10 times, the binary allows the user to enter an arbitrary address and leaks its value. This is effectively a read primitive. 
 
 ### Win function
 
