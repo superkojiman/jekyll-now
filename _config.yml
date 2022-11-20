@@ -24,8 +24,9 @@ footer-links:
   github: superkojiman
   instagram:
   linkedin:
-  pinterest:
-  rss: w00t # just type anything here for a working RSS icon
+  pinterest: 
+  mastodon: superkojiman
+  rss: whatever # just needs to have something for the RSS icon to show
   twitter: superkojiman
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
