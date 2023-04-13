@@ -1,10 +1,12 @@
 ---
 layout: page
-title: PGP
-permalink: /pgp/
+title: Contact
+permalink: /contact/
 ---
 
-If you'd like to communicate with me securely, you can encrypt your messages using my GnuPG public key: 
+If you'd like to reach out to me, links to my email and my social networks are at the bottom of this page. Please don't ask me to assist you with illegal things, those kinds of messages will be ignored. 
+
+If, and **only if**, you have something sensitive you'd like to communicate with me, you can encrypt your messages using my PGP key: 
 
 Fingerprint: `59F0 8B8F BA95 8054 E13E  C5BC 8272 451B 994B 0D98`
 
