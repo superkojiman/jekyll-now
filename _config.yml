@@ -26,6 +26,7 @@ footer-links:
   linkedin:
   pinterest: 
   mastodon: superkojiman
+  bluesky: techorganic.com
   rss: whatever # just needs to have something for the RSS icon to show
   twitter: superkojiman
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
@@ -35,7 +36,7 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus: techorganic
+#disqus: techorganic
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics: UA-50530735-1
@@ -74,7 +75,7 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-plugins:
+gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-redirect-from
